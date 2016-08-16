@@ -1,0 +1,288 @@
+/* * * * * * * * * * * * * * * * * * * * *\  
+  CSShake :: shake-little
+  v1.5.0
+  CSS classes to move your DOM
+  (c) 2015 @elrumordelaluz
+  http://elrumordelaluz.github.io/csshake/
+  Licensed under MIT
+\* * * * * * * * * * * * * * * * * * * * */
+/* line 6, ../../../../sass/sass-collection/mixin/shake/_tools.scss */
+.shake-little {
+  display: inline-block;
+  transform-origin: center center;
+}
+
+/* line 11, ../../../../sass/sass-collection/mixin/shake/_tools.scss */
+.shake-freeze,
+.shake-constant.shake-constant--hover:hover,
+.shake-trigger:hover .shake-constant.shake-constant--hover {
+  animation-play-state: paused;
+}
+
+/* line 12, ../../../../sass/sass-collection/mixin/shake/_tools.scss */
+.shake-freeze:hover,
+.shake-trigger:hover .shake-freeze, .shake-little:hover, .shake-trigger:hover .shake-little {
+  animation-play-state: running;
+}
+
+/* line 11, ../../../../sass/sass-collection/mixin/shake/csshake-little.scss */
+.shake-little {
+  @at-root {
+    @keyframes shake-little {
+      /* line 63, ../../../../sass/sass-collection/mixin/shake/_tools.scss */
+      2% {
+        transform: translate(random(2px)-1px, random(2px)-1px) rotate(random(1deg)-0.5deg);
+      }
+
+      /* line 63, ../../../../sass/sass-collection/mixin/shake/_tools.scss */
+      4% {
+        transform: translate(random(2px)-1px, random(2px)-1px) rotate(random(1deg)-0.5deg);
+      }
+
+      /* line 63, ../../../../sass/sass-collection/mixin/shake/_tools.scss */
+      6% {
+        transform: translate(random(2px)-1px, random(2px)-1px) rotate(random(1deg)-0.5deg);
+      }
+
+      /* line 63, ../../../../sass/sass-collection/mixin/shake/_tools.scss */
+      8% {
+        transform: translate(random(2px)-1px, random(2px)-1px) rotate(random(1deg)-0.5deg);
+      }
+
+      /* line 63, ../../../../sass/sass-collection/mixin/shake/_tools.scss */
+      10% {
+        transform: translate(random(2px)-1px, random(2px)-1px) rotate(random(1deg)-0.5deg);
+      }
+
+      /* line 63, ../../../../sass/sass-collection/mixin/shake/_tools.scss */
+      12% {
+        transform: translate(random(2px)-1px, random(2px)-1px) rotate(random(1deg)-0.5deg);
+      }
+
+      /* line 63, ../../../../sass/sass-collection/mixin/shake/_tools.scss */
+      14% {
+        transform: translate(random(2px)-1px, random(2px)-1px) rotate(random(1deg)-0.5deg);
+      }
+
+      /* line 63, ../../../../sass/sass-collection/mixin/shake/_tools.scss */
+      16% {
+        transform: translate(random(2px)-1px, random(2px)-1px) rotate(random(1deg)-0.5deg);
+      }
+
+      /* line 63, ../../../../sass/sass-collection/mixin/shake/_tools.scss */
+      18% {
+        transform: translate(random(2px)-1px, random(2px)-1px) rotate(random(1deg)-0.5deg);
+      }
+
+      /* line 63, ../../../../sass/sass-collection/mixin/shake/_tools.scss */
+      20% {
+        transform: translate(random(2px)-1px, random(2px)-1px) rotate(random(1deg)-0.5deg);
+      }
+
+      /* line 63, ../../../../sass/sass-collection/mixin/shake/_tools.scss */
+      22% {
+        transform: translate(random(2px)-1px, random(2px)-1px) rotate(random(1deg)-0.5deg);
+      }
+
+      /* line 63, ../../../../sass/sass-collection/mixin/shake/_tools.scss */
+      24% {
+        transform: translate(random(2px)-1px, random(2px)-1px) rotate(random(1deg)-0.5deg);
+      }
+
+      /* line 63, ../../../../sass/sass-collection/mixin/shake/_tools.scss */
+      26% {
+        transform: translate(random(2px)-1px, random(2px)-1px) rotate(random(1deg)-0.5deg);
+      }
+
+      /* line 63, ../../../../sass/sass-collection/mixin/shake/_tools.scss */
+      28% {
+        transform: translate(random(2px)-1px, random(2px)-1px) rotate(random(1deg)-0.5deg);
+      }
+
+      /* line 63, ../../../../sass/sass-collection/mixin/shake/_tools.scss */
+      30% {
+        transform: translate(random(2px)-1px, random(2px)-1px) rotate(random(1deg)-0.5deg);
+      }
+
+      /* line 63, ../../../../sass/sass-collection/mixin/shake/_tools.scss */
+      32% {
+        transform: translate(random(2px)-1px, random(2px)-1px) rotate(random(1deg)-0.5deg);
+      }
+
+      /* line 63, ../../../../sass/sass-collection/mixin/shake/_tools.scss */
+      34% {
+        transform: translate(random(2px)-1px, random(2px)-1px) rotate(random(1deg)-0.5deg);
+      }
+
+      /* line 63, ../../../../sass/sass-collection/mixin/shake/_tools.scss */
+      36% {
+        transform: translate(random(2px)-1px, random(2px)-1px) rotate(random(1deg)-0.5deg);
+      }
+
+      /* line 63, ../../../../sass/sass-collection/mixin/shake/_tools.scss */
+      38% {
+        transform: translate(random(2px)-1px, random(2px)-1px) rotate(random(1deg)-0.5deg);
+      }
+
+      /* line 63, ../../../../sass/sass-collection/mixin/shake/_tools.scss */
+      40% {
+        transform: translate(random(2px)-1px, random(2px)-1px) rotate(random(1deg)-0.5deg);
+      }
+
+      /* line 63, ../../../../sass/sass-collection/mixin/shake/_tools.scss */
+      42% {
+        transform: translate(random(2px)-1px, random(2px)-1px) rotate(random(1deg)-0.5deg);
+      }
+
+      /* line 63, ../../../../sass/sass-collection/mixin/shake/_tools.scss */
+      44% {
+        transform: translate(random(2px)-1px, random(2px)-1px) rotate(random(1deg)-0.5deg);
+      }
+
+      /* line 63, ../../../../sass/sass-collection/mixin/shake/_tools.scss */
+      46% {
+        transform: translate(random(2px)-1px, random(2px)-1px) rotate(random(1deg)-0.5deg);
+      }
+
+      /* line 63, ../../../../sass/sass-collection/mixin/shake/_tools.scss */
+      48% {
+        transform: translate(random(2px)-1px, random(2px)-1px) rotate(random(1deg)-0.5deg);
+      }
+
+      /* line 63, ../../../../sass/sass-collection/mixin/shake/_tools.scss */
+      50% {
+        transform: translate(random(2px)-1px, random(2px)-1px) rotate(random(1deg)-0.5deg);
+      }
+
+      /* line 63, ../../../../sass/sass-collection/mixin/shake/_tools.scss */
+      52% {
+        transform: translate(random(2px)-1px, random(2px)-1px) rotate(random(1deg)-0.5deg);
+      }
+
+      /* line 63, ../../../../sass/sass-collection/mixin/shake/_tools.scss */
+      54% {
+        transform: translate(random(2px)-1px, random(2px)-1px) rotate(random(1deg)-0.5deg);
+      }
+
+      /* line 63, ../../../../sass/sass-collection/mixin/shake/_tools.scss */
+      56% {
+        transform: translate(random(2px)-1px, random(2px)-1px) rotate(random(1deg)-0.5deg);
+      }
+
+      /* line 63, ../../../../sass/sass-collection/mixin/shake/_tools.scss */
+      58% {
+        transform: translate(random(2px)-1px, random(2px)-1px) rotate(random(1deg)-0.5deg);
+      }
+
+      /* line 63, ../../../../sass/sass-collection/mixin/shake/_tools.scss */
+      60% {
+        transform: translate(random(2px)-1px, random(2px)-1px) rotate(random(1deg)-0.5deg);
+      }
+
+      /* line 63, ../../../../sass/sass-collection/mixin/shake/_tools.scss */
+      62% {
+        transform: translate(random(2px)-1px, random(2px)-1px) rotate(random(1deg)-0.5deg);
+      }
+
+      /* line 63, ../../../../sass/sass-collection/mixin/shake/_tools.scss */
+      64% {
+        transform: translate(random(2px)-1px, random(2px)-1px) rotate(random(1deg)-0.5deg);
+      }
+
+      /* line 63, ../../../../sass/sass-collection/mixin/shake/_tools.scss */
+      66% {
+        transform: translate(random(2px)-1px, random(2px)-1px) rotate(random(1deg)-0.5deg);
+      }
+
+      /* line 63, ../../../../sass/sass-collection/mixin/shake/_tools.scss */
+      68% {
+        transform: translate(random(2px)-1px, random(2px)-1px) rotate(random(1deg)-0.5deg);
+      }
+
+      /* line 63, ../../../../sass/sass-collection/mixin/shake/_tools.scss */
+      70% {
+        transform: translate(random(2px)-1px, random(2px)-1px) rotate(random(1deg)-0.5deg);
+      }
+
+      /* line 63, ../../../../sass/sass-collection/mixin/shake/_tools.scss */
+      72% {
+        transform: translate(random(2px)-1px, random(2px)-1px) rotate(random(1deg)-0.5deg);
+      }
+
+      /* line 63, ../../../../sass/sass-collection/mixin/shake/_tools.scss */
+      74% {
+        transform: translate(random(2px)-1px, random(2px)-1px) rotate(random(1deg)-0.5deg);
+      }
+
+      /* line 63, ../../../../sass/sass-collection/mixin/shake/_tools.scss */
+      76% {
+        transform: translate(random(2px)-1px, random(2px)-1px) rotate(random(1deg)-0.5deg);
+      }
+
+      /* line 63, ../../../../sass/sass-collection/mixin/shake/_tools.scss */
+      78% {
+        transform: translate(random(2px)-1px, random(2px)-1px) rotate(random(1deg)-0.5deg);
+      }
+
+      /* line 63, ../../../../sass/sass-collection/mixin/shake/_tools.scss */
+      80% {
+        transform: translate(random(2px)-1px, random(2px)-1px) rotate(random(1deg)-0.5deg);
+      }
+
+      /* line 63, ../../../../sass/sass-collection/mixin/shake/_tools.scss */
+      82% {
+        transform: translate(random(2px)-1px, random(2px)-1px) rotate(random(1deg)-0.5deg);
+      }
+
+      /* line 63, ../../../../sass/sass-collection/mixin/shake/_tools.scss */
+      84% {
+        transform: translate(random(2px)-1px, random(2px)-1px) rotate(random(1deg)-0.5deg);
+      }
+
+      /* line 63, ../../../../sass/sass-collection/mixin/shake/_tools.scss */
+      86% {
+        transform: translate(random(2px)-1px, random(2px)-1px) rotate(random(1deg)-0.5deg);
+      }
+
+      /* line 63, ../../../../sass/sass-collection/mixin/shake/_tools.scss */
+      88% {
+        transform: translate(random(2px)-1px, random(2px)-1px) rotate(random(1deg)-0.5deg);
+      }
+
+      /* line 63, ../../../../sass/sass-collection/mixin/shake/_tools.scss */
+      90% {
+        transform: translate(random(2px)-1px, random(2px)-1px) rotate(random(1deg)-0.5deg);
+      }
+
+      /* line 63, ../../../../sass/sass-collection/mixin/shake/_tools.scss */
+      92% {
+        transform: translate(random(2px)-1px, random(2px)-1px) rotate(random(1deg)-0.5deg);
+      }
+
+      /* line 63, ../../../../sass/sass-collection/mixin/shake/_tools.scss */
+      94% {
+        transform: translate(random(2px)-1px, random(2px)-1px) rotate(random(1deg)-0.5deg);
+      }
+
+      /* line 63, ../../../../sass/sass-collection/mixin/shake/_tools.scss */
+      96% {
+        transform: translate(random(2px)-1px, random(2px)-1px) rotate(random(1deg)-0.5deg);
+      }
+
+      /* line 63, ../../../../sass/sass-collection/mixin/shake/_tools.scss */
+      98% {
+        transform: translate(random(2px)-1px, random(2px)-1px) rotate(random(1deg)-0.5deg);
+      }
+
+      /* line 71, ../../../../sass/sass-collection/mixin/shake/_tools.scss */
+      0%, 100% {
+        transform: translate(0, 0) rotate(0);
+      }
+}
+}
+
+}
+/* line 83, ../../../../sass/sass-collection/mixin/shake/_tools.scss */
+.shake-little:hover, .shake-trigger:hover .shake-little, .shake-little.shake-freeze, .shake-little.shake-constant {
+  animation: shake-little 100ms ease-in-out infinite;
+}

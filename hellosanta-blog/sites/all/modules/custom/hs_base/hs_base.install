@@ -1,0 +1,53 @@
+<?php
+
+function hs_base_install()
+{
+  module_enable(array('workbench_settings'),TRUE);
+}
+function hs_base_update_7001()
+{
+  module_enable(array('hello_santa_web_design_drupal_and_more_document'),TRUE);
+  	features_revert_module('hello_santa_web_design_drupal_and_more_document');
+	 //create custom-menu
+	$items = array(
+	array(
+	'link_title' => '內部文件',
+	'link_path' => 'document',
+	'weight' => 7,
+	),
+	);
+
+	$plid=0;
+
+	foreach ($items as $link) {
+	$ls = array(
+	'menu_name' => 'menu-santa-menu',
+	'link_title' => $link['link_title'],
+	'link_path' => $link['link_path'],
+	'weight' => $link['weight'],
+	'plid' => $plid,
+	);
+	$newpid = menu_link_save($ls);
+	}
+	///////
+	$items = array(
+	array(
+	'link_title' => '內部文件',
+	'link_path' => 'document',
+	'weight' => 7,
+	),
+	);
+
+	$plid=0;
+
+	foreach ($items as $link) {
+	$ls = array(
+	'menu_name' => 'menu-fast-link',
+	'link_title' => $link['link_title'],
+	'link_path' => $link['link_path'],
+	'weight' => $link['weight'],
+	'plid' => $plid,
+	);
+	$newpid = menu_link_save($ls);
+	}
+}

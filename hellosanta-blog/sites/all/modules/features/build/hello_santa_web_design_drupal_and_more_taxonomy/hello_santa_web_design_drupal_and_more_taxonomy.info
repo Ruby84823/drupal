@@ -1,0 +1,10 @@
+name = Hello Santa web design,drupal and more 分類
+core = 7.x
+package = Configuration
+dependencies[] = features
+dependencies[] = hello_santa_web_design_drupal_and_more_seo
+dependencies[] = taxonomy
+features[ctools][] = strongarm:strongarm:1
+features[features_api][] = api:2
+features[taxonomy][] = tags
+features[taxonomy][] = type_class

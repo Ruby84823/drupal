@@ -1,0 +1,433 @@
+/**
+ * @file
+ * Positioning for a responsive layout.
+ *
+ * Define CSS classes to create a fluid grid layout with optional sidebars
+ * depending on whether blocks are placed in the left or right sidebars.
+ *
+ * This layout uses the Zen Grids plugin for Compass: http://zengrids.com
+ */
+
+// We are going to create a fluid grid with 1, 3, or 5 columns and 20px gutters
+// between columns (applied as 10px of left/right padding on each column).
+$zen-column-count: 1;
+$zen-gutter-width: 20px;
+// If you need IE6/7 support for box-sizing: border-box (default), see _init.scss
+//$zen-box-sizing: content-box;
+// You can generate more efficient CSS if you manually apply the
+// zen-grid-item-base mixin to all grid items from within a single ruleset.
+$zen-auto-include-item-base: false;
+// $zen-auto-include-flow-item-base: false;
+// Suppress this section of CSS for RTL layouts since it contains no CSS that
+// needs RTL-specific overrides.
+@if $zen-reverse-all-floats==false {
+    /**
+ * Center the page.
+ *
+ * For screen sizes larger than 1200px, prevent excessively long lines of text
+ * by setting a max-width.
+ */
+    #page,
+    .region-bottom {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 1440px;
+    }
+    /* Apply the shared properties of grid items in a single, efficient ruleset. */
+    #header,
+    #content,
+    #navigation,
+    .region-sidebar-first,
+    .region-sidebar-second,
+    #footer {
+        // See the note about $zen-auto-include-item-base above.
+        @include zen-grid-item-base();
+    }
+    /* Containers for grid items and flow items. */
+    #header,
+    #main,
+    #footer {
+        @include zen-grid-container();
+    }
+    /* Navigation bar */
+    @media all and (min-width: 480px) {
+        #main {
+            /* Move all the children of #main down to make room. */
+            padding-top: $nav-height;
+            position: relative;
+        }
+        #navigation {
+            /* Move the navbar up inside #main's padding. */
+            position: absolute;
+            top: 0;
+            height: $nav-height;
+            width: $zen-grid-width;
+        }
+    }
+} // End of @if $zen-reverse-all-floats == false
+
+/**
+ * Use 3 grid columns for smaller screens.
+ */
+
+@media all and (min-width: 480px) and (max-width: 959px) {
+    $zen-column-count: 3;
+    /**
+   * The layout when there is only one sidebar, the left one.
+   */
+    .sidebar-first {
+        /* Span 2 columns, starting in 2nd column from left. */
+        #content {
+            @include zen-grid-item(2, 2);
+        }
+        /* Span 1 column, starting in 1st column from left. */
+        .region-sidebar-first {
+            @include zen-grid-item(1, 1);
+        }
+    }
+    /**
+   * The layout when there is only one sidebar, the right one.
+   */
+    .sidebar-second {
+        /* Span 2 columns, starting in 1st column from left. */
+        #content {
+            @include zen-grid-item(2, 1);
+        }
+        /* Span 1 column, starting in 3rd column from left. */
+        .region-sidebar-second {
+            @include zen-grid-item(1, 3);
+        }
+    }
+    /**
+   * The layout when there are two sidebars.
+   */
+    .two-sidebars {
+        /* Span 2 columns, starting in 2nd column from left. */
+        #content {
+            @include zen-grid-item(2, 2);
+        }
+        /* Span 1 column, starting in 1st column from left. */
+        .region-sidebar-first {
+            @include zen-grid-item(1, 1);
+        }
+        /* Start a new row and span all 3 columns. */
+        .region-sidebar-second {
+            @include zen-grid-item(3, 1);
+            @include zen-nested-container(); // Since we're making every block in this region be a grid item.
+            @include zen-clear();
+            /* Apply the shared properties of grid items in a single, efficient ruleset. */
+            .block {
+                @include zen-grid-item-base();
+            }
+            /* Span 1 column, starting in the 1st column from left. */
+            .block:nth-child(3n+1) {
+                @include zen-grid-item(1, 1);
+                @include zen-clear();
+            }
+            /* Span 1 column, starting in the 2nd column from left. */
+            .block:nth-child(3n+2) {
+                @include zen-grid-item(1, 2);
+            }
+            /* Span 1 column, starting in the 3rd column from left. */
+            .block:nth-child(3n) {
+                @include zen-grid-item(1, 3);
+            }
+        }
+    }
+}
+
+
+/**
+ * Use 5 grid columns for larger screens.
+ */
+
+@media all and (min-width: 960px) {
+    $zen-column-count: 5;
+    /**
+   * The layout when there is only one sidebar, the left one.
+   */
+    .sidebar-first {
+        /* Span 4 columns, starting in 2nd column from left. */
+        #content {
+            @include zen-grid-item(4, 2);
+        }
+        /* Span 1 column, starting in 1st column from left. */
+        .region-sidebar-first {
+            @include zen-grid-item(1, 1);
+        }
+    }
+    /**
+   * The layout when there is only one sidebar, the right one.
+   */
+    .sidebar-second {
+        /* Span 4 columns, starting in 1st column from left. */
+        #content {
+            @include zen-grid-item(4, 1);
+        }
+        /* Span 1 column, starting in 5th column from left. */
+        .region-sidebar-second {
+            @include zen-grid-item(1, 5);
+        }
+    }
+    /**
+   * The layout when there are two sidebars.
+   */
+    .two-sidebars {
+        /* Span 3 columns, starting in 2nd column from left. */
+        #content {
+            @include zen-grid-item(3, 2);
+        }
+        /* Span 1 column, starting in 1st column from left. */
+        .region-sidebar-first {
+            @include zen-grid-item(1, 1);
+        }
+        /* Span 1 column, starting in 5th column from left. */
+        .region-sidebar-second {
+            @include zen-grid-item(1, 5);
+        }
+    }
+}
+
+@media all and (min-width: 480px) {
+    $zen-column-count: 24;
+    body {
+        #header {
+            .region-header {
+                position: absolute;
+                top: 50%;
+                right: 0;
+                -ms-transform: translate(0%, -50%);
+                -webkit-transform: translate(0%, -50%);
+                transform: translate(0%, -50%);
+                margin: 0 auto;
+            }
+        }
+        #page {
+            #main {
+                //首頁上方三欄
+                #block-views-front-block-block-1 {
+                    &:after {
+                        content: "";
+                        display: block;
+                        height: 1px;
+                        clear: both;
+                    }
+                    .view-content {
+                        .item-list {
+                            ul {
+                                li {
+                                    /*@include grid(3, 3%);*/
+                                    padding: 15px 0;
+                                    .views-field-title {
+                                        a {
+                                            font-size: 20px;
+                                        }
+                                    }
+                                    .views-field-name {
+                                        float: left;
+                                    }
+                                    .views-field-created {
+                                        float: right;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                //首頁最新文章
+                #block-views-front-block-block {
+                    .view-front-block {
+                        .view-content {
+                            .item-list {
+                                ul {
+                                    li {
+                                        @include grid(2, 3%);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                //研究室--------------------------------------------------------------------------------------------------------------------
+                .view-css-research,
+                .view-backstage-research,
+                .view-service-research,
+                .view-other,
+                .view-taxonomy-term {
+                    .view-content {
+                        .item-list {
+                            ul {
+                                .views-row {
+                                    .views-field-field-image {
+                                        float: left;
+                                        clear: both;
+                                        margin-right: 15px;
+                                    }
+                                    .views-field-body {}
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media all and (min-width: 480px) and (max-width: 768px) {
+    body {
+        #header {
+            .header_wapper {
+                position: relative;
+                .region-header {
+                    position: absolute;
+                    top: 50%;
+                    right: 0;
+                    -ms-transform: translate(0%, -50%);
+                    -webkit-transform: translate(0%, -50%);
+                    transform: translate(0%, -50%);
+                    #sidr-wrapper-0 {
+                        a {
+                            font-size: 30px;
+                        }
+                    }
+                    #block-block-2 {
+                        display: none;
+                    }
+                }
+            }
+        }
+        #page {
+            #main {
+                //研究室--------------------------------------------------------------------------------------------------------------------
+                .view-css-research,
+                .view-backstage-research,
+                .view-service-research,
+                .view-other,
+                .view-taxonomy-term {
+                    .view-content {
+                        .item-list {
+                            ul {
+                                .views-row {
+                                    .views-field-name {
+                                        float: left;
+                                        clear: both;
+                                    }
+                                    .views-field-created {
+                                        float: left;
+                                        padding: 0 10px;
+                                    }
+                                    .views-field-field-image {
+                                        float: left;
+                                        clear: both;
+                                        margin-right: 15px;
+                                        width: 100%;
+                                    }
+                                    .views-field-body {}
+                                    .views-field-nid {
+                                        float: left;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width: 480px) {
+    body {
+        #header {
+            #logo {
+                width: 100%;
+            }
+            .header_wapper {
+                position: relative;
+                .region-header {
+                    position: absolute;
+                    top: 50%;
+                    right: 0;
+                    -ms-transform: translate(0%, -50%);
+                    -webkit-transform: translate(0%, -50%);
+                    transform: translate(0%, -50%);
+                    #sidr-wrapper-0 {
+                        a {
+                            font-size: 30px;
+                        }
+                    }
+                }
+            }
+        }
+        #page {
+            #main {
+                #content {
+                    #block-views-front-block-block {
+                        .view-content {
+                            .item-list {
+                                ul {
+                                    li {
+                                        width: 100%;
+                                    }
+                                }
+                            }
+                        }
+                        .pager {
+                            .pager-next,
+                            .pager-previous {
+display: none;
+                            }
+                        }
+                    }
+                    //研究室--------------------------------------------------------------------------------------------------------------------
+                    .view-css-research,
+                    .view-backstage-research,
+                    .view-service-research,
+                    .view-other,
+                    .view-taxonomy-term {
+                        .view-content {
+                            .item-list {
+                                ul {
+                                    margin: 24px 0;
+                                    .views-row {
+                                        width: 100%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                //側邊欄
+                .sidebars {
+                    #block-block-2 {}
+                    //側邊欄好站分享
+                    #block-block-3 {
+                        &:after {
+                            content: "";
+                            display: block;
+                            height: 1px;
+                            clear: both;
+                        }
+                        .goodweb {
+                            a {
+                                @include grid(2, 0%);
+                            }
+                        }
+                    }
+                    /*                    #block-fb-likebox-0 {
+                        .fb_iframe_widget{
+                            width: 100%;
+                            span {
+                                width: 100%!important;
+                                iframe {
+                                    width: 100%!important;
+                                }
+                            }
+                        }
+                    }*/
+                }
+            }
+        }
+    }
+}

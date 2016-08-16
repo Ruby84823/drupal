@@ -1,0 +1,448 @@
+@charset "UTF-8";
+/******************************************************************************************************************
+
+                                                                                                    extend code
+
+******************************************************************************************************************/
+/*************************************
+                              佈局
+**************************************/
+/* line 16, ../../sass/sass-collection/_sass-code.scss */
+.style-mask1 .style-wrapper, .style-mask2 .style-wrapper, .style-float-img1 .style-wrapper, .style-float-img2 .style-wrapper, .style-float-img3 .style-wrapper {
+  *zoom: 1;
+}
+/* line 19, ../../sass/sass-collection/_sass-code.scss */
+.style-mask1 .style-wrapper:before, .style-mask2 .style-wrapper:before, .style-float-img1 .style-wrapper:before, .style-float-img2 .style-wrapper:before, .style-float-img3 .style-wrapper:before, .style-mask1 .style-wrapper:after, .style-mask2 .style-wrapper:after, .style-float-img1 .style-wrapper:after, .style-float-img2 .style-wrapper:after, .style-float-img3 .style-wrapper:after {
+  content: " ";
+  display: table;
+}
+/* line 23, ../../sass/sass-collection/_sass-code.scss */
+.style-mask1 .style-wrapper:after, .style-mask2 .style-wrapper:after, .style-float-img1 .style-wrapper:after, .style-float-img2 .style-wrapper:after, .style-float-img3 .style-wrapper:after {
+  clear: both;
+}
+
+/* line 29, ../../sass/sass-collection/_sass-code.scss */
+.style-float-img3 .style-wrapper .content-wrapper {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+/* line 39, ../../sass/sass-collection/_sass-code.scss */
+.style-mask2 .style-wrapper .image:after, .style-float-img3 .style-wrapper .image a:after {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+}
+
+/* line 97, ../../sass/sass-collection/_sass-code.scss */
+.wrapper {
+  position: relative;
+  height: 400px;
+  border: 1px solid red;
+  width: 450px;
+  margin: 0 auto;
+}
+/* line 103, ../../sass/sass-collection/_sass-code.scss */
+.wrapper div {
+  border: 1px solid;
+  width: auto;
+  text-align: center;
+}
+/* line 108, ../../sass/sass-collection/_sass-code.scss */
+.wrapper .left-top {
+  position: absolute;
+  box-sizing: border-box;
+  padding: 20px;
+  left: 0px;
+  top: 0px;
+}
+/* line 111, ../../sass/sass-collection/_sass-code.scss */
+.wrapper .left-center {
+  position: absolute;
+  box-sizing: border-box;
+  padding: 20px;
+  left: 0px;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+/* line 114, ../../sass/sass-collection/_sass-code.scss */
+.wrapper .left-bottom {
+  position: absolute;
+  box-sizing: border-box;
+  padding: 20px;
+  left: 0px;
+  bottom: 0px;
+}
+/* line 117, ../../sass/sass-collection/_sass-code.scss */
+.wrapper .center-center {
+  position: absolute;
+  box-sizing: border-box;
+  padding: 20px;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+/* line 120, ../../sass/sass-collection/_sass-code.scss */
+.wrapper .center-top {
+  position: absolute;
+  box-sizing: border-box;
+  padding: 20px;
+  left: 50%;
+  -ms-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  top: 0px;
+}
+/* line 123, ../../sass/sass-collection/_sass-code.scss */
+.wrapper .center-bottom {
+  position: absolute;
+  box-sizing: border-box;
+  padding: 20px;
+  left: 50%;
+  -ms-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  bottom: 0px;
+}
+/* line 126, ../../sass/sass-collection/_sass-code.scss */
+.wrapper .right-top {
+  position: absolute;
+  box-sizing: border-box;
+  padding: 20px;
+  right: 0px;
+  top: 0px;
+}
+/* line 129, ../../sass/sass-collection/_sass-code.scss */
+.wrapper .right-center {
+  position: absolute;
+  box-sizing: border-box;
+  padding: 20px;
+  right: 0px;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+/* line 132, ../../sass/sass-collection/_sass-code.scss */
+.wrapper .right-bottom {
+  position: absolute;
+  box-sizing: border-box;
+  padding: 20px;
+  right: 0px;
+  bottom: 0px;
+}
+
+/*************************************
+                             特效區
+**************************************/
+/********************
+                 圖片
+********************/
+/********************
+                 選單
+********************/
+/********************
+                 按鈕
+********************/
+/*************************************
+                             動畫區
+**************************************/
+/******************************************************************************************************************
+
+                                                                                                             mixin code
+                                                                                                             
+******************************************************************************************************************/
+/*************************************
+                              兼容標籤
+**************************************/
+/*************************************
+                              佈局
+**************************************/
+/*************************************
+                             特效區
+**************************************/
+/********************
+                 圖片
+********************/
+/********************
+                 圖型
+********************/
+/********************
+                 選單
+********************/
+/********************
+                 按鈕
+********************/
+/*************************************
+                             動畫區
+**************************************/
+/*************************************
+                              佈局
+**************************************/
+/**********************************************************
+                                            標籤在圖片上
+**********************************************************/
+/* line 17, ../../sass/sass-collection/_drupal-block-style.scss */
+.style1-tag1 .style-wrapper {
+  position: relative;
+}
+/* line 19, ../../sass/sass-collection/_drupal-block-style.scss */
+.style1-tag1 .style-wrapper .taxonomy {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  text-align: center;
+  width: 150px;
+  height: auto;
+  background: #7ac8cc;
+  color: white;
+  margin: 20px 0px 0px 20px;
+  padding: 10px 0px;
+}
+
+/*
+<div class="style-wrapper">
+<div class="image">[field_image]</div>
+<div class="taxonomy">[field_news_taxonomy]</div>
+</div>
+*/
+/**********************************************************
+                                             遮罩圖片
+***********************************************************/
+/* line 49, ../../sass/sass-collection/_drupal-block-style.scss */
+.style-mask1 .style-wrapper {
+  position: relative;
+}
+/* line 53, ../../sass/sass-collection/_drupal-block-style.scss */
+.style-mask1 .style-wrapper .image img {
+  float: left;
+}
+/* line 57, ../../sass/sass-collection/_drupal-block-style.scss */
+.style-mask1 .style-wrapper .content-wrapper {
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+  height: auto;
+  background: rgba(0, 0, 0, 0.6);
+  box-sizing: border-box;
+  padding: 20px;
+}
+/* line 66, ../../sass/sass-collection/_drupal-block-style.scss */
+.style-mask1 .style-wrapper .content-wrapper * {
+  color: white;
+}
+
+/*
+<div class="style-wrapper">
+<div class="image">[field_image]</div>
+<div class="content-wrapper">
+<div class="title">[title]</div>
+<div class="create-date">[created]</div>
+</div>
+*/
+/* line 85, ../../sass/sass-collection/_drupal-block-style.scss */
+.style-mask2 .style-wrapper {
+  position: relative;
+}
+/* line 88, ../../sass/sass-collection/_drupal-block-style.scss */
+.style-mask2 .style-wrapper * {
+  color: white;
+}
+/* line 92, ../../sass/sass-collection/_drupal-block-style.scss */
+.style-mask2 .style-wrapper .image img {
+  float: left;
+}
+/* line 95, ../../sass/sass-collection/_drupal-block-style.scss */
+.style-mask2 .style-wrapper .image:after {
+  content: "";
+  display: block;
+  background: rgba(0, 0, 0, 0.6);
+}
+/* line 102, ../../sass/sass-collection/_drupal-block-style.scss */
+.style-mask2 .style-wrapper .content-wrapper {
+  position: absolute;
+  bottom: 0px;
+  padding: 20px;
+}
+
+/*<div class="style-wrapper">
+<div class="image">[field_discuss_taxonomy_image]</div>
+<div class="content-wrapper">
+<div class="title">[name]</div>
+<div class="slogan">[field_second]</div>
+</div>*/
+/***********************************************************
+                                           圖片至左
+***********************************************************/
+/* line 125, ../../sass/sass-collection/_drupal-block-style.scss */
+.style-float-img1 .style-wrapper {
+  position: relative;
+}
+/* line 128, ../../sass/sass-collection/_drupal-block-style.scss */
+.style-float-img1 .style-wrapper .image {
+  float: left;
+  width: 50%;
+}
+/* line 132, ../../sass/sass-collection/_drupal-block-style.scss */
+.style-float-img1 .style-wrapper .content-wrapper {
+  float: left;
+  width: 50%;
+  box-sizing: border-box;
+  padding: 0px 5%;
+}
+
+/*<div class="style-wrapper">
+<div class="image">[field_image]</div>
+<div class="content-wrapper">
+<div class="title">[title]</div>
+<div class="create-date">[created]</div>
+<div class="taxonomy">[field_news_taxonomy]</div>
+</div>*/
+/* line 152, ../../sass/sass-collection/_drupal-block-style.scss */
+.style-float-img2 .style-wrapper {
+  position: relative;
+}
+/* line 155, ../../sass/sass-collection/_drupal-block-style.scss */
+.style-float-img2 .style-wrapper .image {
+  float: left;
+  width: 50%;
+}
+/* line 158, ../../sass/sass-collection/_drupal-block-style.scss */
+.style-float-img2 .style-wrapper .image img {
+  float: left;
+}
+/* line 162, ../../sass/sass-collection/_drupal-block-style.scss */
+.style-float-img2 .style-wrapper .taxonomy {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  width: 50%;
+  box-sizing: border-box;
+  padding: 15px 5%;
+}
+/* line 169, ../../sass/sass-collection/_drupal-block-style.scss */
+.style-float-img2 .style-wrapper .taxonomy:before {
+  content: "";
+  display: block;
+  width: 80%;
+  height: 2px;
+  background: #7ac8cc;
+  position: absolute;
+  top: 0px;
+}
+/* line 179, ../../sass/sass-collection/_drupal-block-style.scss */
+.style-float-img2 .style-wrapper .content-wrapper {
+  position: relative;
+  float: left;
+  width: 50%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 0px 5%;
+}
+
+/*<div class="style-wrapper">
+<div class="image">[field_image]</div>
+<div class="taxonomy">[field_news_taxonomy]</div>
+<div class="content-wrapper">
+<div class="title">[title]</div>
+<div class="create-date">[created]</div>
+</div>*/
+/* line 200, ../../sass/sass-collection/_drupal-block-style.scss */
+.style-float-img3 {
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+/* line 202, ../../sass/sass-collection/_drupal-block-style.scss */
+.style-float-img3 .style-wrapper {
+  position: relative;
+}
+/* line 205, ../../sass/sass-collection/_drupal-block-style.scss */
+.style-float-img3 .style-wrapper .image {
+  position: relative;
+  float: left;
+  width: 20%;
+}
+/* line 209, ../../sass/sass-collection/_drupal-block-style.scss */
+.style-float-img3 .style-wrapper .image:after {
+  content: "";
+  display: block;
+  width: 0px;
+  height: 0px;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 10px solid white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+/* line 219, ../../sass/sass-collection/_drupal-block-style.scss */
+.style-float-img3 .style-wrapper .image a:after {
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  background: rgba(0, 0, 0, 0.6);
+  content: "";
+  display: block;
+}
+/* line 226, ../../sass/sass-collection/_drupal-block-style.scss */
+.style-float-img3 .style-wrapper .image a:before {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #ffffff;
+  border-radius: 100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+/* line 240, ../../sass/sass-collection/_drupal-block-style.scss */
+.style-float-img3 .style-wrapper .image img {
+  float: left;
+}
+/* line 244, ../../sass/sass-collection/_drupal-block-style.scss */
+.style-float-img3 .style-wrapper .content-wrapper {
+  position: absolute;
+  left: 20%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 0px 5%;
+}
+/* line 258, ../../sass/sass-collection/_drupal-block-style.scss */
+.style-float-img3:hover .style-wrapper .image a:after {
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  opacity: 0;
+}
+
+/*<div class="style-wrapper">
+<div class="image">[field_youtube]</div>
+<div class="content-wrapper">
+<div class ="content">
+<div class="title">[title]</div>
+<div class="create-date">[created]</div>
+</div>
+</div>*/

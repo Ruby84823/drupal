@@ -1,0 +1,14 @@
+name= hs_base
+description=Hellosanta base
+package=HelloSanta
+core=7.x
+
+files[]=hs_base.install
+files[]=hs_base.info
+files[]=hs_base.module
+
+
+Information added by HelloSanta Engineer base
+version = "7.x-0.1"
+core = "7.x"
+project = "Hellosanta"

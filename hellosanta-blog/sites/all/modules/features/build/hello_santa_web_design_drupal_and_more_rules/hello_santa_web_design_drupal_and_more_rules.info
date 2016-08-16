@@ -1,0 +1,13 @@
+name = Hello Santa web design,drupal and more Rules
+core = 7.x
+package = Configuration
+dependencies[] = entity
+dependencies[] = rules
+dependencies[] = scheduler
+features[features_api][] = api:2
+features[rules_config][] = scheduler_remove_publish_date_component
+features[rules_config][] = scheduler_remove_unpublish_date_component
+features[rules_config][] = scheduler_send_email_after_publishing_node
+features[rules_config][] = scheduler_send_email_after_unpublishing_node
+features[rules_config][] = scheduler_set_publish_date_component
+features[rules_config][] = scheduler_set_unpublish_date_component

@@ -1,0 +1,47 @@
+diff --git a/disqus.module b/disqus.module
+index 5850e66..572d4a7 100644
+--- a/disqus.module
++++ b/disqus.module
+@@ -213,12 +213,22 @@ function disqus_node_load($nodes, $types) {
+   // Check which Disqus domain to use.
+   $domain = variable_get('disqus_domain', '');
+   if (!empty($domain)) {
++    // Get the Disqus status of each node.
++    $statuses = db_query("SELECT nid, status FROM {disqus} WHERE nid IN (:nids)", array(':nids' => array_keys($nodes)))->fetchAllAssoc('nid');
++
++    // Load the default Disqus status for each content type.
++    $disqus_status = variable_get('disqus_nodetypes_default', _disqus_node_types_options());
++
+     // Load Disqus into the nodes.
+     foreach ($nodes as &$node) {
+       if (!empty($disqustypes[$node->type])) {
+         // Save the data to the node object.
+         $node->disqus = array('domain' => $domain);
+ 
++        // Apply the Disqus status to the node.
++        $disqus_default_status = !empty($disqus_status[$node->type]);
++        $node->disqus['status'] = isset($statuses[$node->nid]->status) ? (bool) $statuses[$node->nid]->status : $disqus_default_status;
++
+         // Build the absolute URL without the alias for the disqus_url flag.
+         $node->disqus['url'] = url("node/$node->nid", array(
+           'absolute' => TRUE,
+@@ -239,19 +249,6 @@ function disqus_node_load($nodes, $types) {
+         }
+       }
+     }
+-
+-    // Get the Disqus status of each node.
+-    $statuses = db_query("SELECT nid, status FROM {disqus} WHERE nid IN (:nids)", array(':nids' => array_keys($nodes)))->fetchAllAssoc('nid');
+-
+-    // Load the default Disqus status for each content type.
+-    $disqus_status = variable_get('disqus_nodetypes_default', _disqus_node_types_options());
+-
+-    foreach ($nodes as &$node) {
+-      $disqus_default_status = !empty($disqus_status[$node->type]);
+-
+-      // Apply the Disqus status to the node.
+-      $node->disqus['status'] = isset($statuses[$node->nid]->status) ? (bool) $statuses[$node->nid]->status : $disqus_default_status;
+-    }
+   }
+ }
+ 

@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Hello Santa web design,drupal and more SEO feature.
+ */
+
+include_once 'hello_santa_web_design_drupal_and_more_seo.features.inc';

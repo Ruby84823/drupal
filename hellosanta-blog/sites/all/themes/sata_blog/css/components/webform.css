@@ -1,0 +1,47 @@
+/* line 1, ../../sass/components/webform.scss */
+#webform-wrapper {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: none;
+  background-color: #b088ff;
+  opacity: 0.5;
+}
+
+/* line 11, ../../sass/components/webform.scss */
+#block-webform-client-block-122 {
+  width: 600px;
+  height: 350px;
+  margin-top: -175px;
+  margin-left: -300px;
+  display: none;
+  position: fixed;
+  background-color: pink;
+  top: 50%;
+  left: 50%;
+  z-index: 67;
+}
+/* line 23, ../../sass/components/webform.scss */
+#block-webform-client-block-122 .webformhide {
+  cursor: pointer;
+}
+/* line 25, ../../sass/components/webform.scss */
+#block-webform-client-block-122 .webformhide .right, #block-webform-client-block-122 .webformhide .left {
+  transition: .6s;
+  display: block;
+  width: 25px;
+  height: 5px;
+  background: black;
+  border-radius: 10px;
+  position: absolute;
+  top: 21px;
+  right: 20px;
+  transform: rotate(45deg);
+}
+/* line 37, ../../sass/components/webform.scss */
+#block-webform-client-block-122 .webformhide .left {
+  top: 20px;
+  transform: rotate(-45deg);
+}

@@ -1,0 +1,671 @@
+    /**
+ * @file
+ * Styles are organized using the SMACSS technique. @see http://smacss.com/book/
+ *
+ * When you turn on CSS aggregation at admin/config/development/performance, all
+ * of these @include files will be combined into a single file.
+ */
+    /* Import Sass mixins, variables, Compass modules, etc. */
+
+    @import "init";
+    /* HTML element (SMACSS base) rules */
+
+    @import "normalize";
+    /* Layout rules */
+
+    @import "sass-collection/_sass-code.scss";
+    @import "layouts/responsive";
+    @import "components/webform";
+    /* Component (SMACSS module) rules */
+
+    @import "components/misc";
+    // Optionally, add your own components here.
+    @import "print";
+    /* SMACSS theme rules */
+    /* @import "theme-A"; */
+    /* @import "theme-B"; */
+
+    //code for contral item-------------------------------------------------------------
+    .clearfix {
+        @extend %clearfix;
+    }
+
+    .margin-top {
+        margin-top: 40px!important;
+    }
+
+    .margin-bottom {
+        margin-bottom: 40px!important;
+    }
+
+    .pad-none {
+        @include responsive-display(block, none, none, none);
+    }
+
+    .small-pad-none {
+        @include responsive-display(block, block, none, none);
+    }
+
+    .phone-none {
+        @include responsive-display(block, block, block, none);
+    }
+
+    //for page main code-------------------------------------------------------------------------
+    $main-color:#E83435;
+    $main-color1:#FFB2B2;
+    %max-width {
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+
+    %clear-margin-padding {
+        padding: 0px;
+        margin: 0px;
+    }
+
+    %main-padding {
+        box-sizing: border-box;
+        padding: 0px 20px;
+    }
+
+    %hover {
+        color: $main-color;
+        @include transition(all 0.5s);
+        &:hover {
+            color: $main-color1;
+            @include transition(all 0.5s);
+        }
+    }
+
+    %hover1 {
+        color: $main-color1;
+        @include transition(all 0.5s);
+        &:hover {
+            color: $main-color;
+            @include transition(all 0.5s);
+        }
+    }
+
+    %hover-background-1 {
+        border: 1px solid $main-color;
+        background: #ffffff;
+        color: $main-color;
+        @include transition(all 0.5s);
+        &:hover {
+            background: $main-color;
+            color: #ffffff;
+            @include transition(all 0.5s);
+        }
+    }
+
+    %hover-background-1-reverse {
+        border: 1px solid $main-color;
+        background: $main-color;
+        color: #ffffff;
+        @include transition(all 0.5s);
+        &:hover {
+            background: #ffffff;
+            color: $main-color;
+            @include transition(all 0.5s);
+        }
+    }
+
+    %hover-font-size {
+        color: $main-color;
+        font-size: 20px;
+        @include transition(all 0.3s);
+        &:hover {
+            color: $main-color1;
+            font-size: 25px;
+            @include transition(all 0.3s);
+        }
+    }
+
+    %no-list-style {
+        ul {
+            list-style: none;
+        }
+        li {
+            list-style-type: none;
+            list-style-image: none;
+        }
+    }
+
+    //for global code----------------------------------------------------------------------------
+    body {
+        line-height: 2em;
+        background: #F8F8F8;
+        font-family: "justfont1", "微軟正黑體", Helvetica, Arial;
+        h1 {
+            @extend %clear-margin-padding;
+        }
+        h2 {
+            @extend %clear-margin-padding;
+        }
+        h2.block__title {
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        h3 {
+            @extend %clear-margin-padding;
+            padding-bottom: 10px;
+            color: #323232;
+            line-height: 1.5em;
+            a {
+                font-size: 18px;
+                @extend %hover;
+            }
+        }
+        h5 {
+            @extend %clear-margin-padding;
+        }
+        ul {
+            @extend %clear-margin-padding;
+        }
+        li {
+            @extend %clear-margin-padding;
+        }
+        a {
+            text-decoration: none;
+            outline: none!important;
+        }
+        img {
+            height: auto!important;
+            display: block;
+        }
+        .block {
+            margin: 0px;
+        }
+        #navigation {
+            display: none;
+        }
+        .views-row {
+            @include transition(all 1s);
+        }
+        .block-views,
+        .view-display-id-page {
+            @extend %no-list-style;
+            p {
+                @extend %clear-margin-padding;
+            }
+        }
+        .block-menu-block {
+            @extend %no-list-style;
+        }
+        #disqus_thread {
+            @extend .margin-top;
+        }
+        .username {
+            @extend %hover;
+        }
+        .breadcrumb {
+            a {
+                @extend %hover;
+            }
+        }
+        .pager {
+            @include display-flex;
+            @include justify-content(center);
+            @extend .margin-top;
+            @extend .margin-bottom;
+            color: $main-color1;
+            a {
+                @extend %hover;
+            }
+        }
+        //for google search
+        .gs-title {
+            height: auto!important;
+        }
+        //for justfont
+        #justfont-badge {
+            display: none!important;
+        }
+        //for icon style code--------------------------------------------
+        .icon-left {
+            .style {
+                display: inline-block;
+                margin-right: 5px;
+                min-width: 30px;
+            }
+        }
+        .line-icon {
+            .style {
+                span {
+                    display: block;
+                    background: #ffffff;
+                    height: 4px;
+                    border-radius: 20px;
+                    @include transition(all 0.2s);
+                }
+                .line1 {
+                    width: 25px;
+                }
+                .line2 {
+                    width: 20px;
+                    margin: 3px 0px;
+                }
+            }
+            &:hover {
+                .style {
+                    .line1 {
+                        width: 20px;
+                    }
+                    .line2 {
+                        width: 25px;
+                    }
+                }
+            }
+        }
+        .line-icon-top {
+            .style {
+                transform: rotate(-90deg);
+            }
+        }
+        .line-icon-left {
+            .style {
+                transform: rotate(-180deg);
+            }
+        }
+        .circle-icon {
+            .style {
+                span {
+                    display: block;
+                    border-radius: 100px;
+                }
+                .circle1 {
+                    width: 20px;
+                    height: 20px;
+                    background: #EB8CAC;
+                    position: relative;
+                }
+                .circle2 {
+                    width: 10px;
+                    height: 10px;
+                    background: blue;
+                    @include absolute-align(center, center);
+                }
+            }
+        }
+        .triangle-icon {
+            .style {
+                span {
+                    display: block;
+                    @include triangle(26px, up, #ffffff);
+                }
+            }
+        }
+        .math-icon {
+            .style {}
+        }
+        //end for icon-style
+    }
+
+    //code for responsive menu style-------------------------------
+    .responsive-menu-style {
+        .responsive-menu {
+            @include transition(all 1s);
+            position: fixed;
+            width: 100%;
+            bottom: 0px;
+            right: -100%;
+            z-index: 500;
+            display: block;
+            overflow-y: scroll;
+            .menu {
+                display: block;
+                margin-top: 10%;
+                .menu__item {
+                    @include transition(all 0.6s);
+                    display: block;
+                    text-align: right;
+                    opacity: 0;
+                    margin: 10px 0px;
+                    position: relative;
+                    right: -500px;
+                    a {
+                        display: block;
+                        padding: 10px 20px;
+                        @extend %hover-font-size;
+                    }
+                }
+            }
+            //icon color-----------------------------------------
+            .line-icon {
+                .style {
+                    span {
+                        background: $main-color;
+                    }
+                }
+            }
+            .circle-icon {
+                .style {
+                    .circle1 {
+                        background: $main-color;
+                    }
+                    .circle2 {
+                        background: #EB8CAC;
+                    }
+                }
+            }
+            .triangle-icon {
+                .style {
+                    span {
+                        border-bottom-color: $main-color;
+                    }
+                }
+            }
+            .math-icon {
+                .style {}
+            }
+            //end for icon color
+        }
+        .responsive-menu-nav {
+            position: relative;
+            display: block;
+            //background: #000000;
+            height: 30px;
+            width: 35px;
+            box-sizing: border-box;
+            %nav-block {
+                @include transition(all 0.6s);
+                display: block;
+                width: 100%;
+                height: 5px;
+                background: #ffffff;
+                border-radius: 10px;
+            }
+            .nav-before {
+                @extend %nav-block;
+                @include absolute-align(left, top);
+            }
+            .nav {
+                @extend %nav-block;
+                @include absolute-align(left, center);
+            }
+            .nav-after {
+                @extend %nav-block;
+                @include absolute-align(left, bottom);
+            }
+        }
+        #page {
+            @include transition(all 1s);
+        }
+        #footer {
+            @include transition(all 1s);
+        }
+    }
+
+    .responsive-menu-style-click {
+        .responsive-menu {
+            right: 0px;
+        }
+        #page {
+            opacity: 0;
+        }
+        #footer {
+            opacity: 0;
+        }
+        .responsive-menu-nav {
+            .nav-before {
+                @include absolute-align(left, center);
+                transform: rotate(-405deg);
+            }
+            .nav {
+                opacity: 0;
+                @include absolute-align(left, center);
+            }
+            .nav-after {
+                @include absolute-align(left, center);
+                transform: rotate(405deg);
+            }
+        }
+    }
+
+    .logged-in {
+        .responsive-menu {
+            bottom: -29px;
+        }
+        .header-fix-scroll {
+            top: 29px;
+        }
+    }
+
+    .responsive-menu-fade-in {
+        opacity: 100!important;
+        right: 0px!important;
+    }
+
+    //end for responsive menu style
+    //code start----------------------------------------------------------------------------
+    body {
+        //code for header----------------------------------------
+        #header {
+            background: $main-color;
+            padding: 10px 0px;
+            width: 100%;
+            .header-wrapper {
+                position: relative;
+                @extend %max-width;
+                @include display-flex;
+                @include align-items(center);
+                @include justify-content(space-between);
+                @extend %main-padding;
+                #logo {
+                    float: none;
+                }
+                .header__region {
+                    @include flex-v-center;
+                    .header-menu {
+                        ul.menu {
+                            li.menu__item {
+                                display: inline-block;
+                                a {
+                                    display: block;
+                                    padding: 10px 20px;
+                                    color: #ffffff;
+                                }
+                            }
+                        }
+                    }
+                }
+                .responsive-menu-nav {}
+            }
+        }
+        //end for header
+        //code for fix menu fade in/out-------------------
+        .header-fix {
+            @include transition(all 1s);
+            position: fixed;
+            top: -200px;
+            z-index: 20;
+            opacity: 0;
+        }
+        .header-fix-scroll {
+            top: 0px;
+            opacity: 100;
+        }
+        //end code for code for fix menu fade in/out
+        //code for content-top-------------------------------
+        #content-top {
+            //display: none;
+            .region-content-top {
+                @extend %max-width;
+            }
+        }
+        //end for content-top
+        #page {
+            @extend %max-width;
+            #main {
+                padding: 0px;
+                //code for content-------------
+                #content {
+                    margin-top: 40px;
+                    @extend %main-padding;
+                    .region-wrapper {
+                        padding: 0 20px;
+                    }
+                }
+                //end for content code
+                //code for sidebar---------------
+                .sidebars {
+                    @extend %main-padding;
+                    @extend %clearfix;
+                    margin-top: 40px;
+                }
+                //end for sidebar
+            }
+        }
+        #footer {
+            background: $main-color;
+            .region-footer {
+                @extend %max-width;
+                @extend %main-padding;
+                text-align: center;
+                a {
+                    color: $main-color1;
+                }
+            }
+        }
+    }
+
+    //code for style----------------------------------------------------------------------------------------
+    //code for slideshow style------------------
+    .slideshow-style1 {
+        .slick-slider {
+            @extend %clear-margin-padding;
+            .slick-track {
+                @include list-flex-wrap;
+            }
+        }
+    }
+
+    //end for slideshow---
+    //code for node style-----------------
+    .node-style1 {
+        #page {
+            #content {
+                .region-wrapper {
+                    $border-color: #efefef;
+                    box-sizing: border-box;
+                    border: 1px solid $border-color;
+                    background: #ffffff;
+                    .node-style {
+                        //code for tag---
+                        .field-name-field-tags {
+                            @extend .margin-top;
+                            .field-items {
+                                .field-item {
+                                    display: inline-block;
+                                    margin-top: 5px;
+                                    margin-right: 10px;
+                                    a {
+                                        padding: 5px 10px;
+                                        @extend %hover-background-1-reverse;
+                                    }
+                                }
+                            }
+                        }
+                        //end for tag
+                        //code for other-link--
+                        .field-name-field-reference {
+                            @extend .margin-top;
+                            .field-items {
+                                .field-item {
+                                    a {
+                                        @extend %hover;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    //end for node style
+    //code for views style---------------
+    .grid-style {
+        $border-color: #efefef;
+        box-sizing: border-box;
+        border: 1px solid $border-color;
+        background: #ffffff;
+        @extend %shadow1;
+        .style-wrapper {
+            .image {}
+            .content-wrapper {
+                .title {
+                    border-bottom: 2px solid $border-color;
+                }
+                .body {
+                    //padding-bottom: 65px;
+                }
+                .tag {
+                    padding: 5px 0px;
+                    a {
+                        border: 1px solid $main-color;
+                        background: $main-color;
+                        color: #ffffff;
+                        padding: 3px;
+                        margin-right: 2px;
+                    }
+                }
+                .more {
+                    padding: 20px;
+                    @include absolute-align(right, bottom);
+                    a {
+                        display: block;
+                        padding: 5px;
+                        @extend %hover-background-1;
+                    }
+                }
+            }
+        }
+    }
+
+    //end code for views style
+    //code for block style----------------------
+    %block-object {
+        padding: 20px;
+        box-sizing: border-box;
+        img {
+            margin: 0 auto;
+        }
+        .fb_iframe_widget {
+            width: 100%;
+            text-align: center;
+        }
+        .menu-block-wrapper {
+            .menu {
+                li {
+                    display: block;
+                }
+            }
+        }
+        ul.icon {
+            text-align: center;
+            li.item {
+                display: inline;
+                font-size: 30px;
+                a {
+                    padding: 10px 20px;
+                }
+            }
+        }
+    }
+
+    .block-style1 {
+        display: block;
+        background: #ffffff;
+        $border-color: #efefef;
+        @extend %shadow1;
+        @extend %block-object;
+        border-box: box-sizing;
+        h2.block__title {
+            border-bottom: 2px solid $border-color;
+        }
+        a {
+            @extend %hover;
+        }
+    }

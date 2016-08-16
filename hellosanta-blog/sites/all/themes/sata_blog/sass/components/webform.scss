@@ -1,0 +1,43 @@
+#webform-wrapper{
+ position: fixed;
+ width: 100%;
+ height: 100%;
+ top: 0;
+ left:0;
+ display:none;
+ background-color: #b088ff;
+ opacity: 0.5;
+}
+#block-webform-client-block-122{
+  width:600px;
+  height: 350px;
+  margin-top: -175px;
+  margin-left: -300px;
+  display:none;
+  position:fixed;
+  background-color: pink;
+  top:50%;
+  left:50%;
+  z-index: 67;
+
+.webformhide{
+   cursor: pointer;
+   .right{
+     transition: .6s;
+     display: block;
+     width: 25px;
+     height: 5px;
+     background: black;
+     border-radius: 10px;
+     position: absolute;
+     top:21px;
+     right:20px;
+     transform: rotate(45deg);
+   }
+   .left{
+     @extend .right;
+     top:20px;
+     transform: rotate(-45deg);
+   }
+ }
+}

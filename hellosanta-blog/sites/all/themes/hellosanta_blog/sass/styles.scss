@@ -1,0 +1,406 @@
+/**
+ * @file
+ * Styles are organized using the SMACSS technique. @see http://smacss.com/book/
+ *
+ * When you turn on CSS aggregation at admin/config/development/performance, all
+ * of these @include files will be combined into a single file.
+ */
+
+
+/* Import Sass mixins, variables, Compass modules, etc. */
+
+@import "init";
+
+/* HTML element (SMACSS base) rules */
+
+@import "normalize";
+
+/* Layout rules */
+
+@import "sass-collection/_sass-code.scss";
+@import "layouts/responsive";
+
+/* Component (SMACSS module) rules */
+
+@import "components/misc";
+// Optionally, add your own components here.
+@import "print";
+
+/* SMACSS theme rules */
+
+
+/* @import "theme-A"; */
+
+
+/* @import "theme-B"; */
+
+body {
+    font-family: "微軟正黑體", Helvetica, Arial;
+    background-color: #f8f8f8;
+    ul {
+        margin: 0px;
+        padding-left: 0px;
+        li {
+            list-style: none;
+        }
+    }
+    a {
+        text-decoration: none;
+        list-style: none;
+        color: black;
+        &:hover {
+            color: red;
+        }
+        &:focus {
+            outline: none;
+        }
+    }
+    p {}
+    .block-title {
+        text-align: center;
+    }
+    .breadcrumb {
+        display: none;
+    }
+    #navigation {
+        display: none;
+    }
+    #header {
+        padding: 0 40px;
+        margin: 0 auto;
+        width: 100%;
+        background-color: #E83435;
+        @extend %clearfix;
+        position: relative;
+        .header_wapper {
+            max-width: 1440px;
+            margin: 0 auto;
+            width: 100%;
+            @extend %clearfix;
+            .logo-waper {
+                @extend %clearfix;
+                position: relative;
+                float: left;
+                #logo {
+                    @extend %clearfix;
+                    float: left;
+                    img {
+                        padding: 5px 0;
+                    }
+                }
+            }
+            .region-header {
+                //icon---------------------------------------------------------------
+                /*                #block-block-2 {
+                    float: right;
+                    margin-bottom: 0px;
+                    .icon {
+                        @extend %clearfix;
+                        .icons {
+                            float: left;
+                            padding: 10px 15px;
+                            a {
+                                font-size: 20px;
+                                color: white;
+                            }
+                        }
+                    }
+                }*/
+                //menu-----------------------------------------------------------------------------
+                #block-menu-menu-santa-menu {
+                    float: right;
+                    margin-bottom: 0px;
+                    .menu {
+                        margin: 0px;
+                        li {
+                            float: left;
+                            padding: 10px 15px;
+                            /*                            border: 1px solid;*/
+                            a {
+                                font-weight: bold;
+                                font-size: 16px;
+                                color: white;
+                            }
+                        }
+                    }
+                }
+            }
+            #sidr-wrapper-0 {
+                a {
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+    #page {
+        padding: 20px 40px;
+        #main {
+            #content {
+                #page-title {}
+                #block-views-front-block-block {
+                    .view-front-block {
+                        .view-content {
+                            .item-list {
+                                ul {
+                                    display: -webkit-flex;
+                                    display: -ms-flexbox;
+                                    display: flex;
+                                    -webkit-flex-wrap: wrap;
+                                    -ms-flex-wrap: wrap;
+                                    flex-wrap: wrap;
+                                    li {
+                                        background-color: white;
+                                        margin-bottom: 15px;
+                                        .views-field-field-image {
+                                            img {
+                                                width: 100%;
+                                            }
+                                        }
+                                        .views-field-title {
+                                            clear: both;
+                                            padding: 10px 20px;
+                                            a {
+                                                font-size: 18px;
+                                            }
+                                        }
+                                        .views-field-name {
+                                            float: left;
+                                            padding: 10px 0 0 20px;
+                                            a {
+                                                font-size: 12px;
+                                            }
+                                        }
+                                        .views-field-created {
+                                            float: left;
+                                            padding: 10px 20px;
+                                            span {
+                                                font-size: 12px;
+                                            }
+                                            &:before {
+                                                content: "/";
+                                            }
+                                        }
+                                        .views-field-body {
+                                            padding: 10px 20px;
+                                            clear: both;
+                                            margin-bottom: 20px;
+                                            p {
+                                                font-size: 13px;
+                                                margin: 0px;
+                                            }
+                                            pre {
+                                                font-size: 13px;
+                                                margin: 0px;
+                                            }
+                                        }
+                                        .views-field-nid {
+                                            padding: 10px 20px 10px 20px;
+                                            clear: both;
+                                            a {
+                                                border: 1px solid #e4e4e4;
+                                                padding: 5px;
+                                                font-size: 10px;
+                                                color: #adadad;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .item-list {
+                            .pager {
+                                .pager-next,
+                                .pager-previous {
+                                    a {
+                                        border: 1px solid;
+                                        background-color: white;
+                                        padding: 5px 10px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .node-page {
+                    img {
+                        border-radius: 50%;
+                    }
+                }
+                //前端研究室--------------------------------------------------------------------------------------------------------------------
+                .view-css-research,
+                .view-backstage-research,
+                .view-service-research,
+                .view-other,
+                .view-taxonomy-term {
+                    @extend %clearfix;
+                    .view-content {
+                        .item-list {
+                            ul {
+                                .views-row {
+                                    border: 1px solid;
+                                    padding: 15px;
+                                    box-sizing: border-box;
+                                    @include grid(1, 2%);
+                                    background-color: white;
+                                    position: relative;
+                                    .views-field-title {
+                                        a {
+                                            font-size: 18px;
+                                        }
+                                    }
+                                    .views-field-name {
+                                        float: left;
+                                        padding: 0 10px 0 0;
+                                        a {
+                                            font-size: 14px;
+                                        }
+                                    }
+                                    .views-field-created {
+                                        span {
+                                            font-size: 14px;
+                                        }
+                                    }
+                                    .views-field-body {
+                                        line-height: 30px;
+                                        margin-top: 20px;
+                                    }
+                                    .views-field-field-image {
+                                        img {
+                                            width: 100%;
+                                        }
+                                    }
+                                    .views-field-nid {
+                                        border: 1px solid;
+                                        float: right;
+                                        margin: 20px 0;
+                                        a {
+                                            padding: 20px 15px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .node-frontend,
+                .node-other,
+                .node-backend,
+                .node-server {
+                    border: 1px solid;
+                    @include grid(1, 2%);
+                    padding: 15px;
+                    box-sizing: border-box;
+                    .field-name-title {
+                        h2 {
+                            margin: 0px;
+                        }
+                    }
+                }
+            }
+            .sidebars {
+                #block-google-cse-google-cse {
+                    border: 1px solid #efefef;
+                    @extend %clearfix;
+                    #google-cse-results {
+                        display: none;
+                    }
+                }
+                //首頁標籤雲
+                #block-tagclouds-1 {
+                    border: 5px double red;
+                    padding: 10px;
+                    background-color: white;
+                    @extend %clearfix;
+                    box-sizing: border-box;
+                }
+                //首頁關於我們區塊
+                #block-views-about-usblock-block {
+                    border: 5px inset red;
+                    padding: 10px;
+                    background-color: white;
+                    box-sizing: border-box;
+                    h2 {
+                        border-bottom: 1px solid #efefef;
+                    }
+                    .views-field-field-image {
+                        text-align: center;
+                        overflow: hidden;
+                    }
+                }
+                //首頁粉絲團
+                #block-fb-likebox-0 {
+                    border: 1px solid #efefef;
+                    background-color: white;
+                    h2 {
+                        border-bottom: 1px solid #efefef;
+                    }
+                    .fb_iframe_widget {
+                        width: 100%;
+                        span {
+                            width: 100%!important;
+                            iframe {
+                                width: 100%!important;
+                            }
+                        }
+                    }
+                }
+                //首頁熱門文章----------------------------------------------------
+                #block-views-front-block-block-1 {
+                    border: 1px solid #efefef;
+                    background-color: white;
+                    h2 {
+                        border-bottom: 1px solid #efefef;
+                    }
+                    .view-front-block {
+                        .view-content {
+                            ul {
+                                margin: 0px;
+                                li {
+                                    border-bottom: 1px solid #efefef;
+                                    .views-field-title {
+                                        padding: 0 20px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                //好站分享-------------------------------------------------------------
+                #block-block-3 {
+                    border: 1px solid #efefef;
+                    background-color: white;
+                    text-align: center;
+                    h2 {
+                        border-bottom: 1px solid #efefef;
+                    }
+                }
+                //icon------------------------------------------------------------
+                #block-block-2 {
+                    @extend %clearfix;
+                    h2 {
+                        border-bottom: 1px solid #efefef;
+                    }
+                    .icon {
+                        @extend %clearfix;
+                        .icons {
+                            float: left;
+                            padding: 10px 15px;
+                            a {
+                                font-size: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        #footer {
+            #block-block-1 {
+                margin-bottom: 0px;
+                p {
+                    margin: 0px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

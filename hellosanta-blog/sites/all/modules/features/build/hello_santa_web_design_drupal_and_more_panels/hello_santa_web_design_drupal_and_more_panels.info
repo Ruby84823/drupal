@@ -1,0 +1,9 @@
+name = Hello Santa web design,drupal and more Panels
+core = 7.x
+package = CTools
+dependencies[] = page_manager
+dependencies[] = panels
+dependencies[] = workbench
+features[ctools][] = page_manager:pages_default:1
+features[ctools][] = panels:pipelines:1
+features[features_api][] = api:2
