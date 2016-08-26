@@ -1,3 +1,19 @@
-.header_region{
-  
+#block-system-main-menu{
+    ul{
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      text-align: right;
+      li{
+        display: inline-block;
+        @include rwd-coding(padding,25px,20px,10px,10px);
+        a{
+          color: red;
+          text-decoration: none;
+        }
+        &hover{
+          color: pink;
+        }
+      }
+    }
 }

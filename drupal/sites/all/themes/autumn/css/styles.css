@@ -6,6 +6,12 @@
  * of these @include files will be combined into a single file.
  */
 /* Import Sass mixins, variables, Compass modules, etc. */
+/******************************************************************
+                     responsive media queries
+*******************************************************************/
+/******************************************************************
+                     responsive css
+*******************************************************************/
 /* HTML element (SMACSS base) rules */
 /**
  * @file
@@ -862,6 +868,130 @@ table {
   margin: 0;
   display: flex;
   align-items: center;
+}
+@media screen and (min-width: 1440px) {
+  /* line 7, ../sass/layouts/_header.scss */
+  .header .header_wrapper .header_logo {
+    flex-basis: 30%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+  /* line 7, ../sass/layouts/_header.scss */
+  .header .header_wrapper .header_logo {
+    flex-basis: 35%;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  /* line 7, ../sass/layouts/_header.scss */
+  .header .header_wrapper .header_logo {
+    flex-basis: 50%;
+  }
+}
+@media screen and (max-width: 480px) {
+  /* line 7, ../sass/layouts/_header.scss */
+  .header .header_wrapper .header_logo {
+    flex-basis: 50%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  /* line 7, ../sass/layouts/_header.scss */
+  .header .header_wrapper .header_logo {
+    max-width: 30%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+  /* line 7, ../sass/layouts/_header.scss */
+  .header .header_wrapper .header_logo {
+    max-width: 35%;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  /* line 7, ../sass/layouts/_header.scss */
+  .header .header_wrapper .header_logo {
+    max-width: 50%;
+  }
+}
+@media screen and (max-width: 480px) {
+  /* line 7, ../sass/layouts/_header.scss */
+  .header .header_wrapper .header_logo {
+    max-width: 50%;
+  }
+}
+/* line 11, ../sass/layouts/_header.scss */
+.header .header_wrapper .header__region {
+  justify-content: flex-end;
+}
+@media screen and (min-width: 1440px) {
+  /* line 11, ../sass/layouts/_header.scss */
+  .header .header_wrapper .header__region {
+    flex-basis: 70%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+  /* line 11, ../sass/layouts/_header.scss */
+  .header .header_wrapper .header__region {
+    flex-basis: 65%;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  /* line 11, ../sass/layouts/_header.scss */
+  .header .header_wrapper .header__region {
+    flex-basis: 50%;
+  }
+}
+@media screen and (max-width: 480px) {
+  /* line 11, ../sass/layouts/_header.scss */
+  .header .header_wrapper .header__region {
+    flex-basis: 50%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  /* line 11, ../sass/layouts/_header.scss */
+  .header .header_wrapper .header__region {
+    max-width: 70%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+  /* line 11, ../sass/layouts/_header.scss */
+  .header .header_wrapper .header__region {
+    max-width: 65%;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  /* line 11, ../sass/layouts/_header.scss */
+  .header .header_wrapper .header__region {
+    max-width: 50%;
+  }
+}
+@media screen and (max-width: 480px) {
+  /* line 11, ../sass/layouts/_header.scss */
+  .header .header_wrapper .header__region {
+    max-width: 50%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  /* line 11, ../sass/layouts/_header.scss */
+  .header .header_wrapper .header__region {
+    display: block;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+  /* line 11, ../sass/layouts/_header.scss */
+  .header .header_wrapper .header__region {
+    display: block;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  /* line 11, ../sass/layouts/_header.scss */
+  .header .header_wrapper .header__region {
+    display: none;
+  }
+}
+@media screen and (max-width: 480px) {
+  /* line 11, ../sass/layouts/_header.scss */
+  .header .header_wrapper .header__region {
+    display: none;
+  }
 }
 
 /* line 1, ../sass/layouts/_footer.scss */
@@ -1740,6 +1870,51 @@ tr.selected td {
   padding: 20px;
 }
 
+/* line 2, ../sass/components/_main_menu.scss */
+#block-system-main-menu ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-align: right;
+}
+/* line 7, ../sass/components/_main_menu.scss */
+#block-system-main-menu ul li {
+  display: inline-block;
+}
+@media screen and (min-width: 1440px) {
+  /* line 7, ../sass/components/_main_menu.scss */
+  #block-system-main-menu ul li {
+    padding: 25px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+  /* line 7, ../sass/components/_main_menu.scss */
+  #block-system-main-menu ul li {
+    padding: 20px;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  /* line 7, ../sass/components/_main_menu.scss */
+  #block-system-main-menu ul li {
+    padding: 10px;
+  }
+}
+@media screen and (max-width: 480px) {
+  /* line 7, ../sass/components/_main_menu.scss */
+  #block-system-main-menu ul li {
+    padding: 10px;
+  }
+}
+/* line 10, ../sass/components/_main_menu.scss */
+#block-system-main-menu ul li a {
+  color: red;
+  text-decoration: none;
+}
+/* line 14, ../sass/components/_main_menu.scss */
+#block-system-main-menu ul lihover {
+  color: pink;
+}
+
 /**
  * @file
  * Print styling
@@ -1829,9 +2004,3 @@ tr.selected td {
 /* SMACSS theme rules */
 /* @import "theme-A"; */
 /* @import "theme-B"; */
-/******************************************************************
-                     responsive media queries
-*******************************************************************/
-/******************************************************************
-                     responsive css
-*******************************************************************/
