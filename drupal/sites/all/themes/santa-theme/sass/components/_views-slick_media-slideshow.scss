@@ -1,0 +1,16 @@
+//views-slick_media-slideshow.js
+.views-slick_media-slideshow {
+  @extend .default-slick;
+  video {
+    object-fit: cover;
+    width: 100%;
+  }
+  .slick {
+    .slick-dots {
+      @include absolute-align(center,bottom,20px);
+    }
+  }
+}
+.slick-dots li.slick-active button::before {
+  color: get-font-color(m1);
+}

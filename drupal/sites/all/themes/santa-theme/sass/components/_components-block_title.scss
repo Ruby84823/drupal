@@ -1,0 +1,28 @@
+.block-title_border-between {
+  .block-title {
+    max-width: 950px;
+    margin-left: auto;
+    margin-right: auto;
+    @extend .margin-bottom;
+    @include display-flex;
+    @include justify-content(center);
+    @include align-items(center);
+    .wrapper {
+      position: relative;
+      text-align: center;
+      display: block;
+      white-space: nowrap;
+      padding: 0 45px;
+      font-weight: normal;
+    }
+    &:after,
+    &:before {
+      content: "";
+      display: block;
+      max-width: 100%;
+      width: 45%;
+      height: 1px;
+      background: get-bg-color(m1);
+    }
+  }
+};

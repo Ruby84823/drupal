@@ -1,0 +1,74 @@
+//components-background---------------------------------------------------------
+.components-background{
+  background: get-bg-color(m1);
+}
+//max-width---------------------------------------------------------------------
+.max-width {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+.max-width-md {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+//padding-----------------------------------------------------------------------
+.layout-padding {
+    padding: 0px 20px;
+    @at-root &.layout-padding{
+      padding: 0px 20px;
+    }
+}
+.block-padding {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    @at-root &.block-padding{
+      padding-top: 80px;
+      padding-bottom: 80px;
+    }
+}
+//margin------------------------------------------------------------------------
+//layout-margin
+.margin-top {
+    margin-top: 40px;
+    @at-root &.margin-top{
+      margin-top: 40px;
+    }
+}
+.margin-top-lg {
+    margin-top: 80px;
+    @at-root &.margin-top-lg{
+      margin-top: 80px;
+    }
+}
+.margin-bottom {
+    margin-bottom: 40px;
+    @at-root &.margin-bottom{
+      margin-bottom: 40px;
+    }
+}
+.margin-bottom-lg {
+    margin-bottom: 80px;
+    @at-root &.margin-bottom-lg{
+      margin-bottom: 80px;
+    }
+}
+//列表margin
+.list-margin {
+    @include child-margin(20px);
+}
+.list-margin-small {
+    @include child-margin(10px);
+}
+.list-margin-large {
+    @include child-margin(40px);
+}
+//field margin
+.field-margin {
+    @include child-margin(10px);
+}
+.field-margin-small {
+    @include child-margin(5px);
+}
+.field-margin-large {
+    @include child-margin(20px);
+}

@@ -1,0 +1,51 @@
+//views-slick_media-slideshow.js
+.views-slick-slideshow-carousel {
+  @extend .default-slick;
+  .slick {
+    .slick__slider {
+      margin: 0 auto;
+      max-width: 1200px;
+      position: relative;
+      overflow: hidden;
+      .slick-list {
+        $margin: -20px;
+        margin: (-$margin);
+        .slick__slide {
+          margin: $margin;
+        }
+      }
+    }
+    .slick__arrow {
+      @include absolute-align(center,top);
+      position: absolute;
+      @include rwd-coding(width,115%,100%,100%,100%);
+      @include display-flex;
+      @include justify-content(space-between);
+      .slick-arrow {
+        &:before {
+          font-family: "iconfont" !important;
+          -webkit-font-smoothing: antialiased;
+          -webkit-text-stroke-width: 0.2px;
+          -moz-osx-font-smoothing: grayscale;
+          font-size: 40px;
+          font-style: bold;
+          //color: get-font-color(m1);
+        }
+      }
+      .slick-prev {
+        &:before {
+          content: "\e617";
+        }
+      }
+      .slick-next {
+        &:before {
+          content: "\e638";
+        }
+      }
+    }
+    .slick-dots {
+      position: static;
+      @extend .margin-top-lg;
+    }
+  }
+}

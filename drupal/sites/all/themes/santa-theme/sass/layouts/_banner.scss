@@ -1,0 +1,6 @@
+#banner{
+  position: relative;
+  .bean-block_logo-block{
+    @include absolute-align(center,center);
+  }
+}

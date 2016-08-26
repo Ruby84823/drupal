@@ -1,0 +1,38 @@
+.flex {
+    @include display-flex;
+    height: 100%;
+}
+.flex-rwd {
+    @include rwd-screen(small-pad,phone) {
+        display: block;
+        height: 100%;
+    }
+}
+.flex-row {
+    @include flex-direction(row);
+}
+.flex-scale1 {
+    @include flex-scale(1);
+    width: 100%;
+}
+.flex-row {
+    @include flex-direction(row);
+}
+.flex-column {
+    @include flex-direction(column);
+}
+.justify-content-center {
+    @include justify-content(center);
+}
+.justify-content-space-between {
+    @include justify-content(space-between);
+}
+.column-flex-space-between {
+    @include display-flex;
+    @include justify-content(space-between);
+    @include flex-direction(column);
+    height: 100%;
+}
+.align-items-center {
+    @include align-items(center);
+}

@@ -1,0 +1,29 @@
+#webform-client-form-1 {
+  >div {
+    @include display-flex;
+    @include flex-wrap(wrap);
+    @include justify-content(space-between);
+  }
+  .webform-component {
+    width: 100%;
+    input {
+      box-sizing: border-box;
+      padding: 10px 5px;
+      width: 100%;
+    }
+    textarea {
+      padding: 10px 5px;
+      width: 100%;
+    }
+    &:nth-child(1),
+    &:nth-child(2) {
+      @include rwd-coding(width,45%,45%,100%,100%);
+    }
+  }
+  .form-actions{
+    max-width: 150px;
+    margin: 0 auto;
+    padding: 10px;
+    text-align: center;
+  }
+}

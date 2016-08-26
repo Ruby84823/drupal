@@ -1,0 +1,26 @@
+.bean-block_copyright {
+    .copyright {
+        @include display-flex;
+        @include flex-direction(column);
+        //@include justify-content(space-between);
+        @include align-items(center);
+        // @include rwd-screen(small-pad,phone) {
+        //      @include flex-direction(column);
+        //     @include align-items(center);
+        // }
+        .copyright-text {
+            color: get-font-color(b2);
+            text-align: center;
+
+        }
+        .copyright-icon-wrapper {
+            @include display-flex;
+            a{
+              color: get-font-color(b2);
+            }
+            .icon {
+                padding: 30px 20px;
+            }
+        }
+    }
+}

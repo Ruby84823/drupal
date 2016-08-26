@@ -1,0 +1,15 @@
+.views-block_contact-us{
+  .view-content{
+    .item-list{
+      ul{
+        @extend .field-margin-small;
+        li.views-row{
+          text-align: center;
+          .views-field-field-map-address{
+            @extend .margin-top;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+#footer {
+  background: get-bg-color(m1);
+  .footer-wrapper {
+    @extend .max-width;
+    padding: 20px 10px;
+  }
+  // @at-root .front #footer {
+  //   position: absolute;
+  //   width: 100%;
+  //   bottom: 0;
+  //   background: rgba(0,0,0,0)!important;
+  //   color: get-font-color(b2);
+  // }
+}

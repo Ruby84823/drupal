@@ -1,0 +1,15 @@
+.view.view-display-id-page {
+    .view-filters {
+        @extend .margin-bottom;
+    }
+}
+//第一個view-row
+.first-item-style {
+    .views-row-first {
+        //flex-grid 12col
+        -webkit-flex-basis: 100%;
+        -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+}

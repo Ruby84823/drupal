@@ -1,0 +1,44 @@
+body {
+  background: #aaaa00;
+  color: #aaaa01;
+  p {
+    color: #aaaa01;
+  }
+  a {
+    color: #aaaa02;
+    &.active,
+    &.active-trail,
+    &:hover {
+      color: #aaaa03;
+    }
+  }
+  //h1 style--------------------------------------------------------------------
+  h1 {
+    color: #aaaa04;
+    a {
+      color: #aaaa04;
+    }
+  }
+  //h2 style--------------------------------------------------------------------
+  h2 {
+    color: #aaaa05;
+    a {
+      color: #aaaa05;
+    }
+  }
+  .block-title_border-between {
+    h2.block-title {
+      &:after,
+      &:before {
+        background: #aaaa05;
+      }
+    }
+  }
+  //h3 style--------------------------------------------------------------------
+  h3 {
+    color: #aaaa06;
+    a {
+      color: #aaaa06;
+    }
+  }
+}

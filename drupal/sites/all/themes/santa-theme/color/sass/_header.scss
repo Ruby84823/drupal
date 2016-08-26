@@ -1,0 +1,14 @@
+#header {
+  background: #ffff00;
+  &:after {
+    background: #ffff00;
+  }
+  a {
+    color: #ffff01;
+    &.active,
+    &.active-trail,
+    &:hover {
+      color: #ffff02;
+    }
+  }
+}

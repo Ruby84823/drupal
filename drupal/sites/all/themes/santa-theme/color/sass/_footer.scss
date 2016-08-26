@@ -1,0 +1,15 @@
+#footer {
+  background: #bbbb00;
+  color: #bbbb01;
+  p {
+    color: #bbbb01;
+  }
+  a {
+    color: #bbbb02;
+    &.active,
+    &.active-trail,
+    &:hover {
+      color: #bbbb03;
+    }
+  }
+}

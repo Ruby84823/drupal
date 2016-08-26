@@ -1,0 +1,14 @@
+#page{
+  @extend .max-width;
+  @at-root.not-front #page{
+    @extend .layout-padding;
+    padding-top: 20px;
+    padding-bottom: 80px;
+  }
+}
+
+.full-screen{
+  #page{
+    max-width: 100%;
+  }
+}

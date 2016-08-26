@@ -1,0 +1,30 @@
+//components_1
+.components-background {
+  background: #cccc00;
+}
+.menu-block_main-menu.responsive-menu {
+  &:after {
+    background: #cccc00;
+  }
+}
+.menu-block_main-menu.nav {
+  a.nav-button {
+    .nav-item {
+      background: #cccc00;
+    }
+  }
+}
+.slick-dots li.slick-active button::before {
+  color: #cccc00;
+}
+.slick__arrow .slick-arrow {
+  &:before {
+    color: #cccc00;
+  }
+}
+//components_2
+.menu-block_main-menu.responsive-menu {
+  a {
+    color: #cccc01;
+  }
+}

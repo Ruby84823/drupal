@@ -1,0 +1,52 @@
+body {
+    a {
+        text-decoration: none;
+        outline: 0 !important;
+    }
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+    img {
+        display: block;
+        height: auto!important;
+    }
+    iframe {
+        max-width: 100%;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin: 0;
+    }
+    #main {
+        padding: 0;
+    }
+    .block {
+        margin: 0;
+        padding: 0;
+    }
+    body.hide_title {
+        h1#page-title {
+            display: none;
+        }
+    }
+    .slick {
+        * {
+            &:focus {
+                text-decoration: none;
+                outline: 0 !important;
+            }
+        }
+    }
+    .views-row {
+        display: block;
+        img {
+            //width: 100%;
+          margin: 30px auto;
+        }
+    }
+}

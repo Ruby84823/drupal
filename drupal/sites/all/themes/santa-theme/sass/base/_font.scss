@@ -1,0 +1,62 @@
+body {
+    .h1_normal {
+        font-size: 2em;
+    }
+    .h1_normal_rwd {
+        @include rwd-screen(pc,pad) {
+            font-size: 2em;
+        }
+    }
+    .h1_bold {
+        font-size: 2em;
+    }
+    .h2_normal {
+        font-size: 24px;
+        font-weight: normal;
+    }
+    .h2_bold {
+        font-size: 24px;
+        font-weight: bold;
+    }
+    .h3_normal {
+        font-size: 18px;
+        font-weight: normal;
+    }
+    .h3_bold {
+        font-size: 18px;
+        font-weight: bold;
+    }
+    .h5_normal {
+        font-size: 12px;
+        font-weight: normal;
+    }
+    .h5_bold {
+        font-size: 12px;
+        font-weight: bold;
+    }
+}
+//整體字型樣式
+body {
+    a {
+        color: get-font-color(c1);
+        @include transition(0.5s);
+        &:hover {
+            color: get-font-color(m1);
+        }
+    }
+    h1 {
+        @extend .h1_bold;
+        line-height: 2em;
+        text-align: center;
+    }
+    h3 {
+        @extend .h3_normal;
+        color: get-font-color(b1);
+    }
+    h5 {
+        @extend .h5_normal;
+    }
+    .field-label {
+        font-weight: normal!important;
+    }
+}
